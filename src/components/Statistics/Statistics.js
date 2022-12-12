@@ -5,7 +5,7 @@ export default function Statistics({ title, stats }) {
   //   console.log(stats);
   return (
     <section className="statistics">
-      <h2 className="title">{title.toUpperCase()}</h2>
+      {title && <h2 className="title">{title}</h2>}
 
       <ul className="list">
         {stats.map(({ id, label, percentage }) => (

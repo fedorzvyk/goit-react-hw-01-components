@@ -12,11 +12,11 @@ import transactions from '../data/transactions.json';
 
 export const App = () => {
   return (
-    <div
+    <div className='componentsList'
       style={{
         height: '100vh',
         display: 'flex',
-        justifyContent: 'center',
+        // justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
         color: '#010101'
