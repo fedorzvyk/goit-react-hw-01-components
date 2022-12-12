@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// import './components/Profile/profile';
-
 import { App } from 'components/App';
 import './index.css';
 

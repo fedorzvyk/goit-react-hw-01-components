@@ -1,7 +1,7 @@
-// import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
-export default function Profile(props) {
-  console.log(props);
+function Profile(props) {
+  // console.log(props);
   const { username, tag, location, avatar, stats } = props;
   return (
     <div className="profile">
@@ -30,13 +30,12 @@ export default function Profile(props) {
   );
 }
 
-// ReactDOM.render(
-//   <Profile
-//     username={user.username}
-//     tag={user.tag}
-//     location={user.location}
-//     avatar={user.avatar}
-//     stats={user.stats}
-//   />,
-//   document.querySelector('#root')
-// );
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.object,
+};
+
+export default Profile;
