@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
+import { FaUser, FaRegEye,FaRegThumbsUp } from "react-icons/fa";
 import css from './Profile.module.css'
+
 
 export default function Profile(props) {
   // console.log(props);
@@ -16,15 +18,15 @@ export default function Profile(props) {
       <ul className={css.stats__list}>
         <li className={css.stats__item}>
           <span className={css.label}>Followers</span>
-          <span className={css.quontity}>{stats.followers}</span>
+          <span className={css.quontity}><FaUser/>  {stats.followers}</span>
         </li>
         <li className={css.stats__item}>
           <span className={css.label}>Views</span>
-          <span className={css.quontity}>{stats.views}</span>
+          <span className={css.quontity}><FaRegEye/>  {stats.views}</span>
         </li>
         <li className={css.stats__item}>
           <span className={css.label}>Likes</span>
-          <span className={css.quontity}>{stats.likes}</span>
+          <span className={css.quontity}><FaRegThumbsUp/>  {stats.likes}</span>
         </li>
       </ul>
     </div>

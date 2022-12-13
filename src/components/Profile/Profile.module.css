@@ -42,21 +42,22 @@
   display: flex;
   justify-content: center;
   margin-top: 30px;
-  border-top: 1px solid grey;
+  /* border-top: 1px solid grey; */
 }
 
 .stats__item {
   display: flex;
   flex-direction: column;
   padding: 15px 10px 15px 10px;
+  outline: 1px solid rgb(168, 148, 148);
 
   background-color: rgb(216, 216, 216);
   width: 100%;
 }
 
-.stats__item:not(:last-child) {
+/* .stats__item:not(:last-child) {
   border-right: 1px solid rgb(168, 148, 148);
-}
+} */
 
 .label {
   font-size: 16px;

@@ -21,11 +21,11 @@ export default function FriendList({ friends }) {
 
 function FriendListItem({ avatar, name, isOnline }) {
   return (
-    <div className={css.friend_wrapper}>
+    <>
       <span className={`${css.status} ${css[isOnline]}`}></span>
       <img className={css.avatar} src={avatar} alt={name} width="48" />
       <p className={css.name}>{name}</p>
-    </div>
+    </>
   );
 }
 
