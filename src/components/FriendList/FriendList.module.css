@@ -1,0 +1,31 @@
+.friend_list {
+  margin-bottom: 70px;
+}
+
+.friend_wrapper {
+  display: flex;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+}
+
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: grey;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.true {
+  background-color: green;
+}
+
+.false {
+  background-color: red;
+}

@@ -1,0 +1,23 @@
+.transaction_history {
+  min-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid rgb(128, 128, 128, 0.3);
+  border-collapse: collapse;
+  border-radius: 3px;
+
+  margin-bottom: 50px;
+}
+
+.head_table {
+  border: 1px solid antiquewhite;
+  background-color: rgb(85, 136, 186);
+  color: antiquewhite;
+  padding: 10px;
+}
+
+.body_table {
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  text-align: center;
+  padding: 5px;
+}

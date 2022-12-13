@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
+import CSS from './FriendList.module.css'
 
 export default function FriendList({ friends }) {
   // console.log(friends);
   return (
-    <ul className="friend-list">
+    <ul className={CSS.friend_list}>
       {friends.map(({ avatar, name, isOnline, id }) => (
-        <li key={id} className="item">
+        <li key={id} className={CSS.friend_item}>
           <FriendListItem
-            // id={id}
+            
             isOnline={isOnline}
             name={name}
             avatar={avatar}
@@ -20,10 +21,10 @@ export default function FriendList({ friends }) {
 
 function FriendListItem({ avatar, name, isOnline }) {
   return (
-    <div>
-      <span className="status">{isOnline ? 'online' : 'offline'}</span>
-      <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className="name">{name}</p>
+    <div className={CSS.friend_wrapper}>
+      <span className={`${CSS.status} ${CSS[isOnline]}`}></span>
+      <img className={CSS.avatar} src={avatar} alt={name} width="48" />
+      <p className={CSS.name}>{name}</p>
     </div>
   );
 }
@@ -31,10 +32,10 @@ function FriendListItem({ avatar, name, isOnline }) {
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
-      avatar: PropTypes.string,
-      name: PropTypes.string,
-      isOnline: PropTypes.bool,
+      id: PropTypes.number.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
     })
   ),
 };
