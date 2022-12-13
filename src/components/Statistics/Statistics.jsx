@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import CSS from './Statistics.module.css'
+import css from './Statistics.module.css'
 
 export default function Statistics({ title, stats }) {
   //   console.log(props);
   //   console.log(stats);
   return (
-    <section className={CSS.statistics}>
-      {title && <h2 className={CSS.title}>{title}</h2>}
+    <section className={css.statistics}>
+      {title && <h2 className={css.title}>{title}</h2>}
 
-      <ul className={CSS.stat_list}>
+      <ul className={css.stat_list}>
         {stats.map(({ id, label, percentage }) => (
-          <li key={id} className={CSS.list__item}>
-            <span className={CSS.list__label}>{label}</span>
-            <span className={CSS.list__percentage}>{percentage}%</span>
+          <li key={id} className={css.list__item}>
+            <span className={css.list__label}>{label}</span>
+            <span className={css.list__percentage}>{percentage}%</span>
           </li>
         ))}
       </ul>
