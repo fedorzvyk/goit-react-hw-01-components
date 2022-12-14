@@ -25,17 +25,19 @@
   flex-direction: column;
   padding: 10px 20px;
   outline: 1px solid;
-  background-color: rgb(91, 134, 214);
-  /* border-radius: 2px; */
+  /* background-color: rgb(91, 134, 214); */
+  /* filter: drop-shadow(2px 3px 5px black); */
 }
 
 .list__label {
   font-size: 12px;
   color: white;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 2px black;
 }
 
 .list__percentage {
   font-size: 16px;
   color: white;
+  text-shadow: 2px 2px 2px black;
 }
