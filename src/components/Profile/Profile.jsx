@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
-import { FaUser, FaRegEye,FaRegThumbsUp } from "react-icons/fa";
-import css from './Profile.module.css'
+import { FaUser, FaRegEye, FaRegThumbsUp } from 'react-icons/fa';
+import css from './Profile.module.css';
 
-
-export default function Profile(props) {
-  // console.log(props);
-  const { username, tag, location, avatar, stats } = props;
+export default function Profile({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) {
   return (
     <div className={css.profile}>
       <div className="description">
@@ -18,15 +21,21 @@ export default function Profile(props) {
       <ul className={css.stats__list}>
         <li className={css.stats__item}>
           <span className={css.label}>Followers</span>
-          <span className={css.quontity}><FaUser/>  {stats.followers}</span>
+          <span className={css.quontity}>
+            <FaUser /> {followers}
+          </span>
         </li>
         <li className={css.stats__item}>
           <span className={css.label}>Views</span>
-          <span className={css.quontity}><FaRegEye/>  {stats.views}</span>
+          <span className={css.quontity}>
+            <FaRegEye /> {views}
+          </span>
         </li>
         <li className={css.stats__item}>
           <span className={css.label}>Likes</span>
-          <span className={css.quontity}><FaRegThumbsUp/>  {stats.likes}</span>
+          <span className={css.quontity}>
+            <FaRegThumbsUp /> {likes}
+          </span>
         </li>
       </ul>
     </div>
@@ -38,14 +47,9 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.shape(
-    {
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-
-    }
-  ),
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };
-
-

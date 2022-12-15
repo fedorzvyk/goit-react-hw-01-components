@@ -1,0 +1,16 @@
+.status {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: grey;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.true {
+  background-color: green;
+}
+
+.false {
+  background-color: red;
+}
